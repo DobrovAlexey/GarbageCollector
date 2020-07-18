@@ -6,11 +6,11 @@ namespace GarbageCollectorFramework
     public class OlderToYounger
     {
         [TestMethod]
-        public void DoubleArrayInZeroGeneration()
+        public void OlderToYoungerLink()
         {
             var x = new Foo();  // x -> Gen0
 
-            Assert.AreEqual(GC.GetGeneration(x), 0);
+            Assert.AreEqual(GC.GetGeneration(x), 0);    // x == Gen0
 
             GC.Collect();   // x -> Gen1
 
